@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "example-jenkins-angular2": {
+    "example-jenkins-angular3": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/example-jenkins-angular2",
+            "outputPath": "dist/example-jenkins-angular3",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "example-jenkins-angular2:build:production"
+              "browserTarget": "example-jenkins-angular3:build:production"
             },
             "development": {
-              "browserTarget": "example-jenkins-angular2:build:development"
+              "browserTarget": "example-jenkins-angular3:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "example-jenkins-angular2:build"
+            "browserTarget": "example-jenkins-angular3:build"
           }
         },
         "test": {
@@ -111,7 +111,7 @@
       }
     }
   },
-  "defaultProject": "example-jenkins-angular2",
+  "defaultProject": "example-jenkins-angular3",
   "cli": {
     "defaultCollection": "@angular-eslint/schematics"
   }

@@ -4,8 +4,9 @@ pipeline {
   stages {
     stage('Build & Test') {
       agent {
-        docker {
-          image 'eristemena/docker-node-chromeheadless:14'
+        dockerfile {
+          filename 'Dockerfile.jenkins'
+          args '-u root:sudo'
           reuseNode true
         }
       }
@@ -20,8 +21,9 @@ pipeline {
 
     stage('Coding Standard') {
       agent {
-        docker {
-          image 'node:14.17.0-alpine'
+        dockerfile {
+          filename 'Dockerfile.jenkins'
+          args '-u root:sudo'
           reuseNode true
         }
       }
