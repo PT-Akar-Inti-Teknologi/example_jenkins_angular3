@@ -21,9 +21,8 @@ pipeline {
 
     stage('Coding Standard') {
       agent {
-        dockerfile {
-          filename 'Dockerfile.jenkins'
-          args '-u root:sudo'
+        docker {
+          image 'node:14.17.0-alpine'
           reuseNode true
         }
       }
